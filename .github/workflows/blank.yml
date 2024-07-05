@@ -69,5 +69,5 @@ jobs:
 
       - name: run tests
         run: |
-          cd Roomer
+          cd Roomer/app
           mvn test
