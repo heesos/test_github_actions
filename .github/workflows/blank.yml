@@ -70,4 +70,4 @@ jobs:
       - name: run tests
         run: |
           cd Roomer/app
-          mvn test
+          mvn package
