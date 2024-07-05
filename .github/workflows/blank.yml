@@ -66,3 +66,8 @@ jobs:
         # Runs a set of commands using the runners shell
       - name: Run a ls command
         run: ls
+
+      - name: run tests
+        run: |
+          cd Roomer
+          mvn test
