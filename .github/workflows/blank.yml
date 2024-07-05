@@ -49,5 +49,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check if the file is still in the branch.
         run: ls
-    
+
+      - name: Clone the project file
+        run: git clone https://github.com/heesos/Roomer.git --branch main
+
+      - name: Check if the file is still in the branch.
+        run: ls
   
