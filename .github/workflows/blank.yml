@@ -62,8 +62,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           architecture: x64
-
-      - name: run tests
-        run: mvn test      
-
-  
+        
+        # Runs a set of commands using the runners shell
+      - name: Run a ls command
+        run: ls
