@@ -15,8 +15,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  # This workflow contains a single job called "testing_basic_funcitonality"
+  testing_basic_funcitonality:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -38,3 +38,16 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a ls command
         run: ls
+
+      - name: Make a file
+        run: cat > test.txt
+
+  switching_to_a_different_repo:
+    needs: testing_basic_funcitonality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check if the file is still in the branch.
+        run: ls
+    
+  
