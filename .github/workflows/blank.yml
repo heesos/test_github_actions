@@ -63,4 +63,7 @@ jobs:
           distribution: 'temurin'
           architecture: x64
 
+      - name: run tests
+        run: mvn test      
+
   
